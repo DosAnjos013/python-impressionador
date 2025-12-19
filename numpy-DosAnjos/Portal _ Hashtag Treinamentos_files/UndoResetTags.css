@@ -1,0 +1,110 @@
+/* Reset elements within .markdownUndoResetTagsStyles to resemble default browser styles */
+.markdownUndoResetTagsStyles {
+    color: inherit;
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+
+.markdownUndoResetTagsStyles h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+    font-weight: bold;
+}
+
+.markdownUndoResetTagsStyles h2 {
+    font-size: 1.5em;
+    margin: 0.75em 0;
+    font-weight: bold;
+}
+
+.markdownUndoResetTagsStyles h3 {
+    font-size: 1.17em;
+    margin: 0.83em 0;
+    font-weight: bold;
+}
+
+.markdownUndoResetTagsStyles h4 {
+    font-size: 1em;
+    margin: 1.12em 0;
+    font-weight: bold;
+}
+
+.markdownUndoResetTagsStyles h5 {
+    font-size: 0.83em;
+    margin: 1.5em 0;
+    font-weight: bold;
+}
+
+.markdownUndoResetTagsStyles h6 {
+    font-size: 0.67em;
+    margin: 1.67em 0;
+    font-weight: bold;
+}
+
+.markdownUndoResetTagsStyles p {
+    margin: 1em 0;
+}
+
+.markdownUndoResetTagsStyles blockquote {
+    margin: 1em 0;
+    padding-left: 1em;
+    border-left: 4px solid #ccc;
+}
+
+.markdownUndoResetTagsStyles pre {
+    font-family: monospace;
+    margin: 1em 0;
+}
+
+.markdownUndoResetTagsStyles ul,
+.markdownUndoResetTagsStyles ol {
+    padding-left: 40px;
+    margin: 1em 0;
+}
+
+.markdownUndoResetTagsStyles li {
+    margin: 0.5em 0;
+}
+
+.markdownUndoResetTagsStyles table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.markdownUndoResetTagsStyles th {
+    font-weight: bold;
+    text-align: left;
+    padding: 0.5em;
+    border-bottom: 1px solid #ddd;
+}
+
+.markdownUndoResetTagsStyles td {
+    padding: 0.5em;
+    border-bottom: 1px solid #ddd;
+}
+
+.markdownUndoResetTagsStyles a {
+    color: blue;
+    text-decoration: underline;
+}
+
+.markdownUndoResetTagsStyles b,
+.markdownUndoResetTagsStyles strong {
+    font-weight: bold;
+}
+
+.markdownUndoResetTagsStyles i,
+.markdownUndoResetTagsStyles em {
+    font-style: italic;
+}
+
+.markdownUndoResetTagsStyles hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+}
+
+.markdownUndoResetTagsStyles code {
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+}
