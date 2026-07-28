@@ -1,0 +1,5 @@
+Quantidade anuncio = 274
+Quantidade orgânico = 226
+Quantidade orgânica do youtube = 155
+Quantidade orgânica do site = 73
+Quantidade orgânica das redes sociais = 24
