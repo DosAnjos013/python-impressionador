@@ -39,11 +39,46 @@ import os
 
 lista_arquivos = os.listdir('Mentoria - Leitura de XML e Notas Fiscais com Python/NFs Finais')
 
-for arquivo in lista_arquivos:
-    if 'xml' in arquivo:
-        if 'DANFE' in arquivo:
-           print(le_danfe_xml(f'Mentoria - Leitura de XML e Notas Fiscais com Python/NFs Finais/{arquivo}'))
-
 #mandando pro excel
 '''tabela = pd.DataFrame.from_dict(respostas)
 tabela.to_excel('NFs.xlsx')'''
+
+
+#leitura de nota de serviço:
+
+def le_xml_servico(nota):
+    with open(nota, 'rb') as arquivo:
+        documento = xmltodict.parse(arquivo)
+    print(documento)
+
+    dic_nfe = documento['ConsultarNfseResposta']['ListaNfse']['CompNfse']['Nfse']['InfNfse']
+
+    valor_total = dic_nfe['Servico']['Valores']['ValorServicos']
+    cnpj_vendedor = dic_nfe['PrestadorServico']['IdentificacaoPrestador']['Cnpj']
+    nome_vendedor = dic_nfe['PrestadorServico']['NomeFantasia']
+    cpf_consumidor = dic_nfe['TomadorServico']['IdentificacaoTomador']['CpfCnpj']['Cnpj']
+    nome_consumidor = dic_nfe['TomadorServico']['RazaoSocial']
+    servicos = dic_nfe['Servico']['Discriminacao']
+
+    respostas = {
+        'Valor da nota' : [valor_total],
+        'CNPJ vendedor' : [cnpj_vendedor],
+        'Nome Fantasia vendedor' : [nome_vendedor],
+        'CPF consumidor' : [cpf_consumidor],
+        'Nome consumidor' : [nome_consumidor],
+        'Serviços' : [servicos]
+    }
+
+    return respostas
+
+# verificando arquivos xml de tipos diferentes
+
+for arquivo in lista_arquivos:
+    if 'xml' in arquivo:
+        if 'DANFE' in arquivo:
+           print('DANFE:')
+           print(le_danfe_xml(f'Mentoria - Leitura de XML e Notas Fiscais com Python/NFs Finais/{arquivo}'))
+        else:
+            print('SERVIÇO:')
+            print(le_xml_servico)
+
